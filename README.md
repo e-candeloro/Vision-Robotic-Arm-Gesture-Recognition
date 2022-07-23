@@ -4,8 +4,6 @@
 
 **This repository allows the control of a 7 DOF robot (Panda by Franka Emika) using a webcam, with the movement of the operator body.**
 
-![Demo Video](videos\Robot Control Demos\Short_demo.mp4)
-
 ## Why this project?
 
 This project aims to demostrate a proof of concept using both computer vision algorithms and robot simulation and control, combining Python, OpenCV, Mediapipe and ROS + Gazebo.
@@ -21,5 +19,5 @@ This is a work done for the course of Smart Robotics taught at University of Mod
 
 ## High Level Architecture
 
-![Project Architecture](Images\ROS + Robots\High level final architecture.png)
+![Project Architecture](https://github.com/e-candeloro/Vision-Robotic-Arm-Gesture-Recognition/blob/master/Images/ROS%20%2B%20Robots/High%20level%20final%20architecture.png)
 
