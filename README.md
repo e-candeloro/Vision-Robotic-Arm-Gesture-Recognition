@@ -55,6 +55,7 @@ In the **main.py** script we capture the video footage and also use a pub/sub to
 
 ### **Hand Detector and computing the hand aperture**
 The hand detector class is composed of the following methods:
+
 ![hand_det_class](Images/Vision/HandDetector.png)
 
 ### Hand detector capabilities
@@ -62,6 +63,7 @@ The hand detector class is composed of the following methods:
 
 ### **Pose Detector and computing the pose angles**
 The hand detector class is composed of the following methods:
+
 ![pose_det_class](Images/Vision/Pose%20Detector.png)
 
 ### Pose detector capabilities
