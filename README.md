@@ -4,6 +4,10 @@
 
 **This repository allows the control of a 7 DOF robot (Panda by Franka Emika) using a webcam, with the movement of the operator body.**
 
+### Demo
+
+https://user-images.githubusercontent.com/67196406/180643477-1fb39a60-c666-49cc-a550-87cd11b2aa3e.mp4
+
 ## Why this project?
 
 This is a work done for the course of [Smart Robotics](https://offertaformativa.unimore.it/corso/insegnamento?cds_cod=20-262&aa_ord_id=2009&pds_cod=20-262-2&aa_off_id=2021&lang=ita&ad_cod=IIM-64&aa_corso=2&fac_id=10005&coorte=2020&anno_corrente=2022&durata=2) taught at [University of Modena and Reggio Emilia (UNIMORE)](https://international.unimore.it/) in the second semester of the academic year 2021/2022.
