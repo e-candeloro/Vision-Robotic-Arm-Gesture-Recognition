@@ -2,11 +2,14 @@
 
 ## What is this project about?
 
-**This repository allows the control of a 7 DOF robot (Panda by Franka Emika) using a webcam, with the movement of the operator body.**
+**This repository contains a ROS workspace for the control of a 7 DOF robot (Panda by Franka Emika) or a 2 DOF robot (RRbot) using a webcam, with the movement of the operator body.**
 
-### Demo
+### Demo Panda
 
 https://user-images.githubusercontent.com/67196406/180643477-1fb39a60-c666-49cc-a550-87cd11b2aa3e.mp4
+
+### Demo RRbot
+
 
 ## Why this project?
 
