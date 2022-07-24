@@ -18,7 +18,8 @@ This is a work done for the course of [Smart Robotics](https://offertaformativa.
 
 This project aims to demostrate a **proof of concept** using both computer vision algorithms and robot simulation and control, combining **Python**,**OpenCV**, **Mediapipe** and **ROS + Gazebo**.
 
-Controlling remotely a robot can be useful in dangerous environments, for medical assistance and for simulation/testing.
+In fact, controlling remotely a robot can be useful in dangerous environments, for medical assistance and for simulation/testing.
+Vision control for anthropomorphic robots can be a new way to work with remote operations in a simpler manner.
 
 ### Project Team
 
@@ -29,15 +30,12 @@ Controlling remotely a robot can be useful in dangerous environments, for medica
 
 ## How this repository is organized
 
-In the Demo_1_RRbot_Control we implemented a first version of our project with a simpler 2 DOF robot.
+**NOTE**: In every folder, there are README.md files that contains all the instruction to follow for installing ROS and setting up correctly the workspaces.
 
-In the Demo_2_Panda_Control we implemented a second version of our project with a more complex robot and control with both the hand aperture and pose angles.
-
-In every folder, there are README files that contains all the instruction to follow for installing ROS and setting up correctly the workspaces.
-
-In the project_presentation folder, a Power Point file containing a brief description of the overall work is present.
-
-In the images and videos folders all the media used for this repository and the ppt presentation can be found.
+- In the **Demo_1_RRbot_Control** we implemented a first version of our project with a simpler 2 DOF robot.
+- In the **Demo_2_Panda_Control** we implemented a second version of our project with a more complex robot and control with both the hand aperture and pose angles.
+- In the **project_presentation folder**, a Power Point file containing a brief description of the overall work is present.
+- In the **images** and **videos** folders all the media used for this repository and the ppt presentation can be found.
 
 ## High Level Architecture
 
@@ -49,4 +47,25 @@ In the images and videos folders all the media used for this repository and the 
 4. The hand aperture and angles are sent to the Panda robot in the Gazebo simulation via a Pub/Sub ROS node
 5. The robot is simulated and controlled almost real-time thanks to the Panda Simulator Interfaces packages.
 
+## Vision Algorithm and Package
+
+For the vision part of the project, we used the OpenCV and Mediapipe libraries.
+We created a **HandDetector** and **PoseDetector** modules to extract the hand aperture and pose angles from a video stream.
+In the **main.py** script we capture the video footage and also use a pub/sub to interact with the robot.
+
+### **Hand Detector and computing the hand aperture**
+The hand detector class is composed of the following methods:
+![hand_det_class](Images/Vision/HandDetector.png)
+
+### Hand detector capabilities
+![hand_det_demo](videos/Vision/GIFs/Hand%20Aperture%20Demo.gif)
+
+### **Pose Detector and computing the pose angles**
+The hand detector class is composed of the following methods:
+![pose_det_class](Images/Vision/Pose%20Detector.png)
+
+### Pose detector capabilities
+
+![pose_det_demo2](videos/Vision/GIFs/Angleshowcase.gif)
+![pose_det_demo1](videos/Vision/GIFs/pose_showcase.gif)
 
