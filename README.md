@@ -83,11 +83,8 @@ The hand detector class is composed of the following methods:
 To extract the angles between a set of 3 keypoints (like the elbow angle given the points 12, 14, 16) we make use of the property of the scalar product between two vectors.
 
 1. We create two vectors with the same origin (at the central keypoint, where we want to know the angle value)
-2. We use the following formula to compute the angle between those two vectors
-
-
-<img src="Images\Vision\Angle formula.png" width="200">
-
+2. We use the following formula to compute the angle between those two vectors:
+$\phi = \arccos (\frac{a\cdot b}{|a||b|})$
 3. With this method we can consider both the 2D and 3D keypoints for more robustness!
 
 
@@ -108,19 +105,13 @@ Focusing on the second and final demo of this project,for moving our robot we us
 
 The other 3 joints are fixed 
 
-
-<img src="Images/ROS%20%2B%20Robots/Joint%20mapping%20control%20human.jpg" height="300">
-<img src="Images/ROS%20%2B%20Robots/Joint%20mapping%20control%20robot.jpg" height="300">
-
+<img src="Images/ROS%20%2B%20Robots/Joint%20mapping%20control%20human.jpg" height="300"> <img src="Images/ROS%20%2B%20Robots/Joint%20mapping%20control%20robot.jpg" height="300">
 
 ## Future Improvements
 
 - **Gestures complexity and usability**: Increase the set of possible gestures by adding different types of movements and improving the usability.
-
 - **Test the prototype on a high-end machine**, then transpose it over a real robot.
-
 - **Divide each node into a standalone machine**, which will be connected to the master nodes remotely.
-
 - **Improve the connectivity of the solution**, by exploiting camera and devices that could be connected remotely.
 
 
