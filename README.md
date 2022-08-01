@@ -58,8 +58,9 @@ The hand detector class is composed of the following methods:
 
 ![hand_det_class](Images/Vision/HandDetector.png)
 
+
 ### Hand detector capabilities
-![hand_det_demo](videos/Vision/GIFs/Hand%20Aperture%20Demo.gif)
+<img src="videos/Vision/GIFs/Hand%20Aperture%20Demo.gif" width="700">
 
 ### **Pose Detector and computing the pose angles**
 The hand detector class is composed of the following methods:
@@ -68,6 +69,5 @@ The hand detector class is composed of the following methods:
 
 ### Pose detector capabilities
 
-![pose_det_demo2](videos/Vision/GIFs/Angleshowcase.gif)
-![pose_det_demo1](videos/Vision/GIFs/pose_showcase.gif)
+<img src="videos/Vision/GIFs/pose_showcase.gif" width="400"> <img src="videos/Vision/GIFs/Angleshowcase.gif" width="400"> 
 
