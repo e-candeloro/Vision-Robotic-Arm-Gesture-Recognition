@@ -59,15 +59,71 @@ The hand detector class is composed of the following methods:
 ![hand_det_class](Images/Vision/HandDetector.png)
 
 
-### Hand detector capabilities
+### Hand detector demo
 <img src="videos/Vision/GIFs/Hand%20Aperture%20Demo.gif" width="700">
+
+### **Hand Aperture pipeline**
+
+1. The four hand index tips are located, along the base of the hand (middle point between wrist and thumb base)
+2. The median point between the fingers tips (thumb excluded) is computed
+3. The L2 distance between the base of the hand point and the median fingers position is computed.
+4. The distance is then normalized by the palm size and remapped between the value 0 and 100
+
 
 ### **Pose Detector and computing the pose angles**
 The hand detector class is composed of the following methods:
 
 ![pose_det_class](Images/Vision/Pose%20Detector.png)
 
-### Pose detector capabilities
+### Pose detector demo
 
-<img src="videos/Vision/GIFs/pose_showcase.gif" width="400"> <img src="videos/Vision/GIFs/Angleshowcase.gif" width="400"> 
+<img src="videos/Vision/GIFs/pose_showcase.gif" height="200"> <img src="videos/Vision/GIFs/Angleshowcase.gif" height="200"> 
+
+### **Pose Angles pipeline**
+To extract the angles between a set of 3 keypoints (like the elbow angle given the points 12, 14, 16) we make use of the property of the scalar product between two vectors.
+
+1. We create two vectors with the same origin (at the central keypoint, where we want to know the angle value)
+2. We use the following formula to compute the angle between those two vectors
+
+
+<img src="Images\Vision\Angle formula.png" width="200">
+
+3. With this method we can consider both the 2D and 3D keypoints for more robustness!
+
+
+## ROS and Robot Simulation Package
+
+For the robot simulation and control part of the project, we used the ROS with Gazebo.
+We created ad hoc ROS nodes with a publisher and subsriber to various topics to control the RRbot while we leveraged the [Panda Simulator Package](https://github.com/justagist/panda_simulator) for the Panda arm control.
+
+Both the two demos make use of a pub/sub mechanism but in case of the Panda Control package, the publishing is done with a list of joint values.
+
+### Panda Arm control
+Focusing on the second and final demo of this project,for moving our robot we use:
+
+- One hand for the sixth joint
+- Right-elbow angle for the fourth joint
+- Left-elbow angle for the second joint
+- Left-shoulder angle for the first joint
+
+The other 3 joints are fixed 
+
+
+<img src="Images/ROS%20%2B%20Robots/Joint%20mapping%20control%20human.jpg" height="300">
+<img src="Images/ROS%20%2B%20Robots/Joint%20mapping%20control%20robot.jpg" height="300">
+
+
+## Future Improvements
+
+- **Gestures complexity and usability**: Increase the set of possible gestures by adding different types of movements and improving the usability.
+
+- **Test the prototype on a high-end machine**, then transpose it over a real robot.
+
+- **Divide each node into a standalone machine**, which will be connected to the master nodes remotely.
+
+- **Improve the connectivity of the solution**, by exploiting camera and devices that could be connected remotely.
+
+
+
+
 
